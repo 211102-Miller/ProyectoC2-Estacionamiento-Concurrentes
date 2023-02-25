@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane fx:id="AnchorPain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" />
+<AnchorPane fx:id="roootScene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyecc2.controllers.HelloController">
+   <children>
+      <Button fx:id="buttonCrearAutos" layoutX="136.0" layoutY="334.0" mnemonicParsing="false" onMouseClicked="#buttonOnMouseCrearAutos" text="Crear Autos" />
+   </children>
+</AnchorPane>

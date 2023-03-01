@@ -61,8 +61,6 @@ public class HelloController implements Observer {
             hilosss.start();
             System.out.println("se creo el hilooooo"+ i);
         }
-
-
     }
 
 

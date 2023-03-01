@@ -6,6 +6,7 @@ import java.util.Observable;
 public class MovimientoAuto extends Observable implements Runnable {
 
     private Auto auto;
+    private Estacionamiento estacionamiento;
 
     private boolean status;
 
@@ -19,10 +20,19 @@ public class MovimientoAuto extends Observable implements Runnable {
     @Override
     public void run() {
         while (status){
+
+            // Estado 1. Creado -> Pintar Vehiculo
             setChanged();
             notifyObservers(auto);
-            auto.setX(auto.getX() + 10);
-            System.out.println("corriendo");
+            //Estado 2. Verificar disponibilidad de estacionamiento
+            if (estacionamiento.isNodosDisponibles()) {
+                //Estado 3. Estacionar Vehiculo
+                estacionamiento.addVehiculo(auto.getId());
+
+
+
+            } else {}
+
             try {
                 Thread.sleep(100L);
             } catch (InterruptedException e) {
